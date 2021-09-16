@@ -2,7 +2,6 @@
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -23,6 +22,7 @@ public class MenuController{
     	stage = (Stage)((Node)event.getSource()).getScene().getWindow();
 		scene = new Scene(root);
 		stage.setScene(scene);
+		stage.setTitle("Add Book");
 		stage.show();
 	}
 
@@ -31,6 +31,7 @@ public class MenuController{
     	stage = (Stage)((Node)event.getSource()).getScene().getWindow();
 		scene = new Scene(root);
 		stage.setScene(scene);
+		stage.setTitle("Search Page");
 		stage.show();
 	}
 
@@ -39,6 +40,7 @@ public class MenuController{
     	stage = (Stage)((Node)event.getSource()).getScene().getWindow();
 		scene = new Scene(root);
 		stage.setScene(scene);
+		stage.setTitle("User Info");
 		stage.show();
 		
 	}
@@ -58,6 +60,7 @@ public class MenuController{
     	stage = (Stage)((Node)event.getSource()).getScene().getWindow();
 		scene = new Scene(root);
 		stage.setScene(scene);
+		stage.setTitle("Login Page");
 		stage.show();
 	}
 

@@ -63,6 +63,7 @@ public class Controller {
 	    	stage = (Stage)((Node)event.getSource()).getScene().getWindow();
 			scene = new Scene(root);
 			stage.setScene(scene);
+			stage.setTitle("Login Page");
 			stage.show();
     	}
     	error_label.setText("User Name is already taken");
@@ -73,6 +74,7 @@ public class Controller {
     	stage = (Stage)((Node)event.getSource()).getScene().getWindow();
 		scene = new Scene(root);
 		stage.setScene(scene);
+		stage.setTitle("Login Page");
 		stage.show();
 	}
 
@@ -88,6 +90,7 @@ public class Controller {
 			stage = (Stage)((Node)event.getSource()).getScene().getWindow();
 			scene = new Scene(root);
 			stage.setScene(scene);
+			stage.setTitle("Menu");
 			stage.show();
 		}
 	}
@@ -97,6 +100,7 @@ public class Controller {
 			stage = (Stage)((Node)event.getSource()).getScene().getWindow();
 			scene = new Scene(root);
 			stage.setScene(scene);
+			stage.setTitle("Registration Page");
 			stage.show();
 	}
 

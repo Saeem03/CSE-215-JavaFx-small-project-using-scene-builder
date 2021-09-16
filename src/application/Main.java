@@ -10,9 +10,13 @@ import MyController.DataFile;
 public class Main extends Application {
 	@Override
 	public void start(Stage primaryStage) throws IOException {
+			FileWriter fw = new FileWriter(DataFile.temp_user_record_file);
+			fw.close();
+			DataFile.temp_user_record_file.delete();
 			Parent root = FXMLLoader.load(getClass().getResource("RegistrationPage.fxml"));
 			Scene scene = new Scene(root);
 			primaryStage.setScene(scene);
+			primaryStage.setTitle("Welcome");
 			primaryStage.show();
 	}
 	

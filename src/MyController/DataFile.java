@@ -20,6 +20,7 @@ public class DataFile {
 	public final static File user_record_file = new File("userInfo.txt");
 	public final static File temp_user_record_file = new File("tempUserInfo.txt");
 	public ArrayList<Book> dataList;
+	public static int bookID;
 	static Scanner sc;
 	public DataFile() {
 	}

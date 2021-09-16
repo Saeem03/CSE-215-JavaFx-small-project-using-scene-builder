@@ -36,7 +36,16 @@ public class BookController {
 		String publicationDate = publicationDate_textField_AddBook.getText();
 		String publisher = publisher_textField_AddBook.getText();
 		
-		int bookID=1;
+		int bookID=0;
+		Scanner sc = new Scanner(DataFile.Books_record_file);
+		sc.nextLine();
+		while(sc.hasNext()) {
+			bookID++;
+			if(!(Integer.parseInt(sc.nextLine().split(",")[0])==bookID)) {
+				break;
+			}
+		}
+		sc.close();
 		if(title=="") 
 			title_textField_AddBook.setPromptText("Title can not be empty.");
 		else if(rating_textField_AddBook.getText() == "")
@@ -62,6 +71,9 @@ public class BookController {
 			FileWriter fw = new FileWriter(DataFile.Books_record_file,true);
 			fw.write(b.commaSeperate());
 			fw.close();
+			fw = new FileWriter(DataFile.temp_record_file,true);
+			fw.write(b.commaSeperate());
+			fw.close();
 			title_textField_AddBook.setText("");
 			author_textField_AddBook.setText("");
 			rating_textField_AddBook.setText("");
@@ -78,6 +90,7 @@ public class BookController {
     	stage = (Stage)((Node)event.getSource()).getScene().getWindow();
 		scene = new Scene(root);
 		stage.setScene(scene);
+		stage.setTitle("Menu");
 		stage.show();
 	}
 	

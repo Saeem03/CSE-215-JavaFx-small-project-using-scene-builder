@@ -285,4 +285,3 @@
 977,Deception Point,Dan Brown,3.71,552151769,eng,585,5/1/2004,Corgi Books
 980,Deception Point,Dan Brown,3.71,593055071,eng,448,8/1/2005,Bantam Press
 998,The Millionaire Next Door: The Surprising Secrets of America's Wealthy,Thomas J. Stanley/William D. Danko,4.03,671015206,eng,258,10/1/1998,Gallery Books
-999,Saeem,Shanto,9.0,11111111,eng,700,17/8/2000,nsu

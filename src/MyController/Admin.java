@@ -21,8 +21,8 @@ public class Admin {
 	}
 	public  boolean Login(String userName,String password) throws IOException {
 		sc = new Scanner(DataFile.user_record_file);
-		System.out.println(userName);
-		System.out.println(password);
+//		System.out.println(userName);
+//		System.out.println(password);
 		while(sc.hasNext()) {
 			String str = sc.nextLine();
 			String[] line = str.split(",");

@@ -41,7 +41,6 @@ public class SearchController implements Initializable{
 			return;
 		DataFile dataFile = new DataFile();
 		dataFile.fillDataList(DataFile.temp_record_file);
-		System.out.println(dataFile.dataList.size());
 		watch_list.setText("");
 		FileWriter fw = new FileWriter(DataFile.search_record_file);
 		try {
@@ -49,7 +48,6 @@ public class SearchController implements Initializable{
 				if(dataFile.dataList.get(i).getTitle().toLowerCase().contains(s)) {
 						fw.write(dataFile.dataList.get(i).commaSeperate());
 						watch_list.appendText(dataFile.dataList.get(i).toString());
-//						System.out.println(i);
 				}
 			}
 			fw.close();
@@ -101,7 +99,9 @@ public class SearchController implements Initializable{
     	stage = (Stage)((Node)event.getSource()).getScene().getWindow();
 		scene = new Scene(root);
 		stage.setScene(scene);
+		stage.setTitle("Menu");
 		stage.show();
+		
 	}
    
    

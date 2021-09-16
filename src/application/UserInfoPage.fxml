@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="450.0" prefWidth="650.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="MyController.UserController">
+   <children>
+      <Label layoutX="128.0" layoutY="144.0" prefHeight="37.0" prefWidth="120.0" style="-fx-background-color: azure;" text="       User  Name">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <TextField fx:id="userName_textField_UserPage" editable="false" layoutX="273.0" layoutY="144.0" prefHeight="37.0" prefWidth="215.0" style="-fx-background-color: LAVENDER;" />
+      <TextField fx:id="passwrord_textField_UserPage" editable="false" layoutX="273.0" layoutY="207.0" prefHeight="37.0" prefWidth="215.0" style="-fx-background-color: LAVENDER;" />
+      <Label layoutX="128.0" layoutY="207.0" prefHeight="37.0" prefWidth="120.0" style="-fx-background-color: azure;" text="       Password">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="128.0" layoutY="271.0" prefHeight="37.0" prefWidth="120.0" style="-fx-background-color: azure;" text="       Email">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <TextField fx:id="email_textField_UserPage" editable="false" layoutX="273.0" layoutY="271.0" prefHeight="37.0" prefWidth="215.0" style="-fx-background-color: LAVENDER;" />
+      <Button layoutX="52.0" layoutY="37.0" mnemonicParsing="false" onAction="#goToMenuPage" prefHeight="37.0" prefWidth="82.0" text="back">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Button>
+      <Button layoutX="528.0" layoutY="37.0" mnemonicParsing="false" onAction="#goToLoginPage" prefHeight="37.0" prefWidth="82.0" text="Log out">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="112.0" fitWidth="315.0" layoutX="232.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../RegistrationImage.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

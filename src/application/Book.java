@@ -88,8 +88,8 @@ public class Book {
 	}
 	@Override
 	public String toString() {
-		return "Book:\nId:" + id + "\nTitle:" + title + "\nAuthorName=" + authorName + "\nAverage Rating:"
-				+ average_rating + "\nISBN:" + isbn + "\nLanguage code=" + language_code + "\nTotal Page=" + num_pages
-				+ "\nPublished Date=" + publishDate + "\nPublisher:" + publisher + "\n";
+		return "Book :\nId : " + id + "\nTitle : " + title + "\nAuthor Name : " + authorName + "\nAverage Rating : "
+				+ average_rating + "\nISBN : " + isbn + "\nLanguage code : " + language_code + "\nTotal Page : " + num_pages
+				+ "\nPublished Date : " + publishDate + "\nPublisher : " + publisher + "\n";
 	}
 }

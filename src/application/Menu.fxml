@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane focusTraversable="true" prefHeight="450.0" prefWidth="650.0" style="-fx-background-color: LIGHTSEAGREEN;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MyController.MenuController">
+   <children>
+      <AnchorPane layoutX="137.0" layoutY="21.0" opacity="0.95" prefHeight="395.0" prefWidth="339.0" style="-fx-background-color: LIGHTCORAL;" />
+      <Button layoutX="209.0" layoutY="152.0" mnemonicParsing="false" onAction="#goToAddBookPage" prefHeight="42.0" prefWidth="191.0" style="-fx-background-color: azure; -fx-border-color: black;" text="Add Book">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Button>
+      <Button layoutX="209.0" layoutY="223.0" mnemonicParsing="false" onAction="#goToSearchPage" prefHeight="42.0" prefWidth="191.0" style="-fx-background-color: azure; -fx-border-color: black;" text="Search Book">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Button>
+      <Button layoutX="209.0" layoutY="289.0" mnemonicParsing="false" onAction="#goToUserInfoPage" prefHeight="42.0" prefWidth="191.0" style="-fx-background-color: azure; -fx-border-color: black;" text="User Info">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Button>
+      <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#Exit" prefHeight="42.0" prefWidth="102.0" style="-fx-background-color: LIGHTGREEN; -fx-border-color: black;" text="Exit">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Button>
+      <Label layoutX="181.0" layoutY="21.0" prefHeight="80.0" prefWidth="232.0" style="-fx-background-color: LIGHTCORAL;" text="     Menu" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font name="Clarendon Blk BT Black" size="35.0" />
+         </font>
+      </Label>
+      <Button layoutX="516.0" layoutY="21.0" mnemonicParsing="false" onAction="#goToLogOutPage" prefHeight="42.0" prefWidth="102.0" style="-fx-background-color: LIGHTBLUE; -fx-border-color: red;" text="Log out">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

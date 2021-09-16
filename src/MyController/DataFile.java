@@ -18,6 +18,7 @@ public class DataFile {
 	public final static File search_record_file = new File("searchInfo.txt");
 	public final static File temp_search_record_file = new File("tempSearchInfo.txt");
 	public final static File user_record_file = new File("userInfo.txt");
+	public final static File temp_user_record_file = new File("tempUserInfo.txt");
 	public ArrayList<Book> dataList;
 	static Scanner sc;
 	public DataFile() {
@@ -107,10 +108,36 @@ public class DataFile {
 		for(Book b : dataList)
 			fw.write(b.commaSeperate());
 		fw.close();
-//		moveFile(DataFile.temp_search_record_file, file);
+	}
+	public  void ascendingSortByTitle(File file) throws IOException {
+		fillDataList(file);
+		Collections.sort(dataList,
+				new Comparator<Book>(){
+			public int compare(Book o1, Book o2)
+			{
+				return (o1.getTitle().compareTo(o2.getTitle()));
+			}
+		});
+		FileWriter fw = new FileWriter(file);
+		for(Book b : dataList)
+			fw.write(b.commaSeperate());
+		fw.close();
+	}
+	public  void descendingSortByTitle(File file) throws IOException {
+		fillDataList(file);
+		Collections.sort(dataList,
+				new Comparator<Book>(){
+				public int compare(Book o1, Book o2)
+			{
+				return (o2.getTitle().compareTo(o1.getTitle()));
+			}
+		});
+		FileWriter fw = new FileWriter(file);
+		for(Book b : dataList)
+			fw.write(b.commaSeperate());
+		fw.close();
 	}
 	public  void ascendingSortByRating(File file) throws IOException {
-		
 		fillDataList(file);
 		Collections.sort(dataList,
 			new Comparator<Book>(){
@@ -123,12 +150,12 @@ public class DataFile {
 				  return 0;
 			}
 		});
-		FileWriter fw = new FileWriter(temp_search_record_file);
+		FileWriter fw = new FileWriter(file);
 		for(Book b : dataList)
 			fw.write(b.commaSeperate());
 		fw.close();
-		moveFile(temp_search_record_file,file);
 	}
+		
 	public  void descendingSortByRating(File file) throws IOException {
 		fillDataList(file);
 		Collections.sort(dataList,
@@ -142,11 +169,10 @@ public class DataFile {
 				  return 0;
 			}
 		});
-		FileWriter fw = new FileWriter(temp_search_record_file);
+		FileWriter fw = new FileWriter(file);
 		for(Book b : dataList)
 			fw.write(b.commaSeperate());
 		fw.close();
-		moveFile(temp_search_record_file,search_record_file);
 	}
 	public void moveFile(File from,File to) throws IOException {
 		sc = new Scanner(from);

@@ -66,29 +66,38 @@ public class SearchController implements Initializable{
 		DataFile dataFile = new DataFile();
 		if(s.equals("Sort By ID (Ascending)")) {
 			dataFile.ascendingSortById(DataFile.search_record_file);
-			for (int i = 0; i < dataFile.getDataList().size(); i++) {
-				watch_list.appendText( dataFile.getDataList().get(i).toString());
 			}
-		}
 		else if(s.equals("Sort By ID (Descending)")) {
 			dataFile.descendingSortById(DataFile.search_record_file);
-			for (int i = 0; i < dataFile.getDataList().size(); i++) {
-				watch_list.appendText( dataFile.getDataList().get(i).toString() );
 			}
+		else if(s.equals("Sort By Rating (Ascending)")) {
+			dataFile.ascendingSortByRating(DataFile.search_record_file);
+		}
+		else if(s.equals("Sort By Rating (Descending)")) {
+			dataFile.descendingSortById(DataFile.search_record_file);
+		}
+		else if(s.equals("Sort By Title (Ascending)")) {
+			dataFile.ascendingSortByTitle(DataFile.search_record_file);
+		}
+		else if(s.equals("Sort By Title (Descending)")) {
+			dataFile.descendingSortByTitle(DataFile.search_record_file);
+		}
+		for (int i = 0; i < dataFile.getDataList().size(); i++) {
+			watch_list.appendText( dataFile.getDataList().get(i).toString()+'\n' );
 		}
 		sc.close();
 	}
 
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
-		ObservableList<String> list = FXCollections.observableArrayList("Sort By ID (Ascending)","Sort By ID (Descending)","Sort By Title (Ascending)","Sort By Title(Descending)");
+		ObservableList<String> list = FXCollections.observableArrayList("Sort By ID (Ascending)","Sort By ID (Descending)","Sort By Title (Ascending)","Sort By Title (Descending)","Sort By Rating (Ascending)","Sort By Rating (Descending)");
 		ComboSort.setItems(list);
 	}
 
 	@FXML public void backToMenu(ActionEvent event) throws IOException {
 		FileWriter fw = new FileWriter(DataFile.search_record_file);
 		fw.close();
-		root = FXMLLoader.load(getClass().getResource("../application/login.fxml"));
+		root = FXMLLoader.load(getClass().getResource("../application/Menu.fxml"));
     	stage = (Stage)((Node)event.getSource()).getScene().getWindow();
 		scene = new Scene(root);
 		stage.setScene(scene);

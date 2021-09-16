@@ -1,6 +1,5 @@
 package MyController;
 
-import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Scanner;
@@ -16,17 +15,23 @@ public class Admin {
 				return false;
 		}
 		FileWriter fw = new FileWriter(DataFile.user_record_file,true);
-		fw.write(userName+","+password+","+email);
+		fw.write(userName+","+password+","+email+"\n");
 		fw.close();
 		return true;
 	}
-	public  boolean Login(String userName,String password) throws FileNotFoundException {
+	public  boolean Login(String userName,String password) throws IOException {
 		sc = new Scanner(DataFile.user_record_file);
-		int index=0;
+		System.out.println(userName);
+		System.out.println(password);
 		while(sc.hasNext()) {
-			String[] line = sc.nextLine().split(",");
-			if(line[index].equals(userName) && line[index].equals(password))
+			String str = sc.nextLine();
+			String[] line = str.split(",");
+			if(line[0].equals(userName) && line[1].equals(password)) {
+				FileWriter fw = new FileWriter(DataFile.temp_user_record_file);
+				fw.write(str);
+				fw.close();
 				return true;
+			}
 		}
 		return false;
 	}

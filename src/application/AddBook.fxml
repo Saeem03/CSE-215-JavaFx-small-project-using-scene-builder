@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="450.0" prefWidth="650.0" style="-fx-background-color: light blue;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MyController.BookController">
+   <children>
+      <Label layoutX="97.0" layoutY="51.0" prefHeight="30.0" prefWidth="120.0" style="-fx-background-color: azure; -fx-border-color: green;" text="         Title">
+         <font>
+            <Font name="Century Gothic Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="97.0" layoutY="91.0" prefHeight="30.0" prefWidth="120.0" style="-fx-background-color: azure; -fx-border-color: green;" text="        Author">
+         <font>
+            <Font name="Century Gothic Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="97.0" layoutY="130.0" prefHeight="30.0" prefWidth="120.0" style="-fx-background-color: azure; -fx-border-color: green;" text="        Rating">
+         <font>
+            <Font name="Century Gothic Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="97.0" layoutY="168.0" prefHeight="30.0" prefWidth="120.0" style="-fx-background-color: azure; -fx-border-color: green;" text="        ISBN">
+         <font>
+            <Font name="Century Gothic Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="97.0" layoutY="208.0" prefHeight="30.0" prefWidth="120.0" style="-fx-background-color: azure; -fx-border-color: green;" text="  Language Code">
+         <font>
+            <Font name="Century Gothic Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="97.0" layoutY="247.0" prefHeight="30.0" prefWidth="120.0" style="-fx-background-color: azure; -fx-border-color: green;" text="  Number of Pages">
+         <font>
+            <Font name="Century Gothic Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="97.0" layoutY="286.0" prefHeight="30.0" prefWidth="120.0" style="-fx-background-color: azure; -fx-border-color: green;" text="  Publication date">
+         <font>
+            <Font name="Century Gothic Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="97.0" layoutY="325.0" prefHeight="30.0" prefWidth="120.0" style="-fx-background-color: azure; -fx-border-color: green;" text="      Publisher">
+         <font>
+            <Font name="Century Gothic Bold" size="12.0" />
+         </font>
+      </Label>
+      <TextField fx:id="title_textField_AddBook" layoutX="238.0" layoutY="50.0" prefHeight="30.0" prefWidth="280.0" />
+      <TextField fx:id="author_textField_AddBook" layoutX="238.0" layoutY="90.0" prefHeight="30.0" prefWidth="280.0" />
+      <TextField fx:id="rating_textField_AddBook" layoutX="238.0" layoutY="129.0" prefHeight="30.0" prefWidth="280.0" />
+      <TextField fx:id="languageCode_textField_AddBook" layoutX="238.0" layoutY="207.0" prefHeight="30.0" prefWidth="280.0" />
+      <TextField fx:id="ISBN_textField_AddBook" layoutX="238.0" layoutY="167.0" prefHeight="30.0" prefWidth="280.0" />
+      <TextField fx:id="numberOfPages_textField_AddBook" layoutX="238.0" layoutY="246.0" prefHeight="30.0" prefWidth="280.0" />
+      <TextField fx:id="publicationDate_textField_AddBook" layoutX="238.0" layoutY="285.0" prefHeight="30.0" prefWidth="280.0" />
+      <TextField fx:id="publisher_textField_AddBook" layoutX="238.0" layoutY="324.0" prefHeight="30.0" prefWidth="280.0" />
+      <Button defaultButton="true" layoutX="274.0" layoutY="388.0" mnemonicParsing="false" onAction="#addBookMethod" prefHeight="45.0" prefWidth="233.0" text="Add Book" wrapText="true">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Label fx:id="outputResult_textField_AddBook" layoutX="238.0" layoutY="354.0" prefHeight="30.0" prefWidth="280.0" textAlignment="RIGHT" wrapText="true">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Button defaultButton="true" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#backToMenu" prefHeight="36.0" prefWidth="68.0" text="Back">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

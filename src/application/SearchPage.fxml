@@ -14,7 +14,7 @@
             <Font name="System Bold" size="12.0" />
          </font>
       </Button>
-      <TextField fx:id="search_textfield" layoutX="120.0" layoutY="56.0" prefHeight="31.0" prefWidth="253.0" />
+      <TextField fx:id="search_textfield" layoutX="120.0" layoutY="56.0" prefHeight="31.0" prefWidth="253.0" promptText="search by title" />
       <ComboBox fx:id="ComboSort" layoutX="478.0" layoutY="59.0" onAction="#select_sort" prefWidth="150.0" promptText="    Sort" style="-fx-background-color: cornsilk;" visibleRowCount="5" />
       <TextArea fx:id="watch_list" editable="false" layoutX="23.0" layoutY="126.0" prefHeight="310.0" prefWidth="604.0" style="-fx-background-color: cornsilk;" wrapText="true">
          <font>
